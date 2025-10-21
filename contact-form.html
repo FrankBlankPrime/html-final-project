@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A contact form for the website">
+    <meta name="author" content="Frank Hopson">
+    <title>Please Contact Us</title>
+</head>
+
+<body>
+    <a href="#main">Skip to main content</a>
+    <header>
+        <a href=index.html>Frank's Final HTML Project</a>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="data-tables.html">Tables</a></li>
+            <li><a href="multimedia-showcase.html">Media</a></li>
+            <li><a href="site-map.html">Site Map</a></li>
+            <li><a href="contact-form.html" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <h1>Contact Us</h1>
+        <form action="thank-you.html" method="post" data-netlify="true">
+            <p>Have a question/issue? Maybe we can help!</p>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="John"><br />
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Doe"><br />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="JohnDoe@gmail.com"><br />
+                <label for="birth-date">Date of Birth (optional):</label>
+                <input type="date" id="birth-date" name="birth-date"><br />
+                <label for="phone">Phone (optional):</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br />
+                <label for="website">Website/Portfolio (optional):</label>
+                <input type="url" id="website" name="website" placeholder="PortfolioExample.com">
+            </fieldset>
+            <fieldset>
+                <legend>Contact Preferences</legend>
+                <p>Please select your preferred form of contact:</p>
+                <label for="email">Email</label>
+                <input type="radio" id="email" value="email" name="contact-method">
+                <label for="phone">Phone</label>
+                <input type="radio" id="phone" value="phone" name="contact-method">
+                <label for="text">Text Message</label>
+                <input type="radio" id="text" value="text" name="contact-method">
+                <p>Please note the best time(s) to reach you:</p>
+                <label for="morning">Morning (9 AM - 12 PM)</label>
+                <input type="checkbox" id="morning" value="morning" name="contact-time"><br />
+                <label for="afternoon">Afternoon (12 PM - 5 PM)</label>
+                <input type="checkbox" id="afternoon" value="afternoon" name="contact-time"><br />
+                <label for="evening">Evening (5 PM - 8 PM)</label>
+                <input type="checkbox" id="evening" value="evening" name="contact-time"><br />
+                <label for="weekend">Weekend</label>
+                <input type="checkbox" id="weekend" value="weekend" name="contact-time">
+            </fieldset>
+            <fieldset>
+                <legend>Inquiry Details</legend>
+                <label for="subject">Please select the option that best describes your inquiry:</label><br />
+                <select name="subject" id="subject">
+                    <optgroup label="General Inquiries">
+                        <option value="html-question">Question about HTML</option>
+                        <option value="tech-support">Technical Support</option>
+                        <option value="collaboration">Colalboration Opportunity</option>
+                    </optgroup>
+                    <optgroup label="Academic Inquiries">
+                        <option value="tutoring">Tutoring Request</option>
+                        <option value="study-group">Study Group</option>
+                        <option value="project-partner">Project Partnership</option>
+                    </optgroup>
+                </select><br />
+                <label for="priority">Priority Level:</label>
+                <input type="range" id="priority" name="priority" min="1" max="5" default="3"><br />
+                <label for="message">Message:</label>
+                <textarea minlength="10" cols="25" rows="5" id="message" name="message">Please explain your inquiry</textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Submission</legend>
+                <label for="attachment">Please upload any relevant attachments:</label>
+                <input type="file" accept=".pdf, .doc, .docx" id="attachment" name="attachment"><br />
+                <label for="newsletter">Sign up for the newsletter?</label>
+                <input type="checkbox" value="yes" id="yes" name="newsletter"><br />
+                <label for="terms">Terms Agreement:</label>
+                <input type="checkbox" value="agreed" id="agreed" name="terms" required><br /><br />
+                <input type="submit" value="Send Message">
+                <input type="reset" value="Clear Form">
+            </fieldset>
+        </form>
+    </main>
+</body>
+<footer>
+    <p>
+        Copyright: FrankBlankPrime Industries est. <time datetime="2020-12-21">12/21/20</time>
+        <br />
+    <address>
+        Contact Information:<br />
+        Email: <a href="mailto:frankly.hopson@gmail.com">frankly.hopson@gmail.com</a><br />
+        Greater Metro Detroit Area<br />
+        Michigan, United States of America
+    </address>
+    </p>
+</footer>
+</html>

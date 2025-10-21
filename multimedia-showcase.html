@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Some favorite media of Frank's">
+    <meta name="author" content="Frank Hopson">
+    <title>Frank's Favorite Media</title>
+</head>
+<body>
+    <a href="#main">Skip to main content</a>
+    <header>
+        <a href=index.html>Frank's Final HTML Project</a>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="data-tables.html">Tables</a></li>
+            <li><a href="multimedia-showcase.html" aria-current="page">Media</a></li>
+            <li><a href="site-map.html">Site Map</a></li>
+            <li><a href="contact-form.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <h1>Let's look at some media</h1>
+        <p>
+            Please enjoy the fine A/V selection that I have prepared for you on this lovely page.
+        </p>
+
+        <h2>An Introduction</h2>
+        <figure>
+            <figcaption>Please enjoy this brief video introduction:</figcaption>
+            <video 
+                controls
+                width="500"
+                poster="./assets/poster-image.png"
+            >
+            <track
+                kind="captions"
+                srclang="en"
+                src="./assets/introduction-video-1.vtt"
+            >
+            A quick introduction to my humble page
+            <source src="./assets/introduction-video.mp4" type="video/mp4">
+        </figure>
+
+        <h2>And now a word from our sponsor</h2>
+        <figure>
+            <figcaption>Its me, I'm the sponsor. And also fake Corn Flakes</figcaption>
+            <audio
+                controls
+                src="./assets/corn-flakes-ad.mp3"
+            >Just a silly ad I made about Corn Flakes</audio>
+            <details>
+                <summary>Transcript:</summary>
+                <p>
+                    And now a quick word about today's sponsor, Corn Flakes. Sometimes you want
+                    a cereal that's just, there. Corn Flakes; try 'em today.
+                </p>
+            </details>
+        </figure>
+
+        <h2>Check out this cool video I found!</h2>
+        <figure>
+            <figcaption>Oh wow, it's the opening theme to the Jujutsu Kaisen Hidden Inventory arc!</figcaption>
+            <iframe
+                id="where-our-blue-is"
+                title="Ao no Sumika by Tatsuya Kitani"
+                src="https://youtube.com/embed/gcgKUcJKxIs?si=g0-IhnPttXJbqAz0"
+                width="500"
+                height="300"
+            ></iframe>
+        </figure>
+
+        <h2>Fun with images!</h2>
+        <figure>
+            <figcaption>The humble, yet stunning, Premier Ball</figcaption>
+            <map name="premierball">
+                <area
+                    shape="circle"
+                    coord="500,500,50"
+                    href="https://bulbapedia.bulbagarden.net/wiki/Premier_Ball"
+                    alt="button at the center of a premier ball">
+            </map>
+            <picture usemap="#premierball">
+                <source srcset="./assets/premierball-1000.png, ./assets/premierball-750.png 750w, ./assets/premierball-500.png 500w,
+                ./assets/premierball-250.png 250w"
+                sizes="(max-width: 1000px) 250px, 500px, 750px"
+                type="image/png">
+                <img usemap="#premierball" src="./assets/premierball-1000.png" type="image/png">
+            </picture>
+        </figure>
+    </main>
+</body>
+<footer>
+    <p>
+        Copyright: FrankBlankPrime Industries est. <time datetime="2020-12-21">12/21/20</time>
+        <br />
+    <address>
+        Contact Information:<br />
+        Email: <a href="mailto:frankly.hopson@gmail.com">frankly.hopson@gmail.com</a><br />
+        Greater Metro Detroit Area<br />
+        Michigan, United States of America
+    </address>
+    </p>
+</footer>
+</html>
