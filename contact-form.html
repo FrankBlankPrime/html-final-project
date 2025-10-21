@@ -49,10 +49,10 @@
             <fieldset>
                 <legend>Contact Preferences</legend>
                 <p>Please select your preferred form of contact:</p>
-                <label for="email">Email</label>
-                <input type="radio" id="email" value="email" name="contact-method">
-                <label for="phone">Phone</label>
-                <input type="radio" id="phone" value="phone" name="contact-method">
+                <label for="radio-email">Email</label>
+                <input type="radio" id="radio-email" value="email" name="contact-method">
+                <label for="radio-phone">Phone</label>
+                <input type="radio" id="radio-phone" value="phone" name="contact-method">
                 <label for="text">Text Message</label>
                 <input type="radio" id="text" value="text" name="contact-method">
                 <p>Please note the best time(s) to reach you:</p>
@@ -81,7 +81,7 @@
                     </optgroup>
                 </select><br />
                 <label for="priority">Priority Level:</label>
-                <input type="range" id="priority" name="priority" min="1" max="5" default="3"><br />
+                <input type="range" id="priority" name="priority" min="1" max="5" value="3"><br />
                 <label for="message">Message:</label>
                 <textarea minlength="10" cols="25" rows="5" id="message" name="message">Please explain your inquiry</textarea>
             </fieldset>
@@ -90,9 +90,9 @@
                 <label for="attachment">Please upload any relevant attachments:</label>
                 <input type="file" accept=".pdf, .doc, .docx" id="attachment" name="attachment"><br />
                 <label for="newsletter">Sign up for the newsletter?</label>
-                <input type="checkbox" value="yes" id="yes" name="newsletter"><br />
+                <input type="checkbox" value="yes" id="newsletter" name="newsletter"><br />
                 <label for="terms">Terms Agreement:</label>
-                <input type="checkbox" value="agreed" id="agreed" name="terms" required><br /><br />
+                <input type="checkbox" value="agreed" id="terms" name="terms" required><br /><br />
                 <input type="submit" value="Send Message">
                 <input type="reset" value="Clear Form">
             </fieldset>
@@ -107,8 +107,7 @@
                 Email: <a href="mailto:frankly.hopson@gmail.com">frankly.hopson@gmail.com</a><br />
                 Greater Metro Detroit Area<br />
                 Michigan, United States of America
-            </address>
-        </p>
+            </address></p>
     </footer>
 </body>
 
