@@ -1,0 +1,99 @@
+:root {
+    --erik-blue: #80ccff;
+    --erik-pink: #FA9cd6;
+}
+
+body {
+    background-color: #242322;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma;
+    margin-top: 73px;
+}
+
+p {
+    color: #FFF;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 42px;
+    color: var(--erik-blue)
+}
+
+nav {
+    width: 100%;
+    height: 73px;
+    background-color:var(--erik-blue);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+nav p {
+    font-size: 24px;
+    font-weight: 600; 
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-right: 40px;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    transition: ease-in .2s;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background-color: var(--erik-pink);
+}
+
+#contact-link {
+    font-weight: 600;
+    background-color: #242231;
+    margin-right: 200px;
+    color: var(--erik-pink);
+    max-height: 39px;
+    padding: 15px;
+    transition: ease-in .2s;
+}
+
+#contact-link:hover {
+    background-color: var(--erik-pink);
+    color: #242231;
+}
+
+#nav-bar {
+    max-width: 1000px;
+}
+
+#bio-intro {
+    max-width: 1000px;
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+#bio-intro img {
+    object-fit: cover;
+    object-position: 0 0px;
+    border-radius: 100%;
+    width: 187px;
+    height: 187px;
+}

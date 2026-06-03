@@ -6,6 +6,7 @@
     <meta name="description" content="Some favorite media of Frank's">
     <meta name="author" content="Frank Hopson">
     <title>Frank's Favorite Media</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <a href="#main">Skip to main content</a>
@@ -14,14 +15,17 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Main</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="data-tables.html">Tables</a></li>
-            <li><a href="multimedia-showcase.html" aria-current="page">Media</a></li>
-            <li><a href="site-map.html">Site Map</a></li>
-            <li><a href="contact-form.html">Contact</a></li>
-        </ul>
+        <div id="nav-bar"></div>
+            <p>Frank Hopson</p>
+            <ul>
+                <li><a class="nav-link" href="index.html" aria-current="page">Main</a></li>
+                <li><a class="nav-link" href="achievements.html">Achievements</a></li>
+                <li><a class="nav-link" href="data-tables.html">Tables</a></li>
+                <li><a class="nav-link" href="multimedia-showcase.html">Media</a></li>
+                <li><a class="nav-link" href="site-map.html">Site Map</a></li>
+            </ul>
+            <a class="nav-link" id="contact-link" href="contact-form.html">Contact</a>
+        </div>
     </nav>
 
     <main id="main">
