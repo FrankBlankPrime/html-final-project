@@ -213,6 +213,11 @@ dd a:visited {
         max-width: 450px;
     }
 
+    main {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
     p, header a {
         font-size: .8rem;
     }
