@@ -1,6 +1,7 @@
 :root {
     --erik-blue: #80ccff;
     --erik-pink: #FA9cd6;
+    --background-gray: #242322;
 }
 
 * {
@@ -8,7 +9,7 @@
 }
 
 body {
-    background-color: #242322;
+    background-color: var(--background-gray);
     width: 100vw;
     height: 100vh;
     padding: 0;
@@ -33,25 +34,58 @@ h1 {
     color: var(--erik-blue)
 }
 
-h2, h3 {
+h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+h2,
+h3,
+h4 {
     color: var(--erik-blue);
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+article aside {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+aside {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    background-color: color-mix(in srgb, var(--erik-pink) 85%, transparent);
+    border-radius: 15px;
+    padding: 10px;
+    color: black;
+}
+
+section:not(#bio-intro) {
+    margin-bottom: 125px;
+}
+
+footer {
+    background-color: color-mix(in srgb, var(--erik-blue) 85%, transparent);
+    padding: 15px;
 }
 
 nav {
     width: 100%;
     height: 73px;
-    background-color:var(--erik-blue);
+    background-color: var(--erik-blue);
     position: fixed;
     top: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row nowrap;
 }
 
 nav p {
     font-size: 24px;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 nav ul {
@@ -68,11 +102,53 @@ header {
     margin-top: 90px;
 }
 
+dl,
+ol,
+ul {
+    color: #fff;
+}
+
 header a {
     color: #fff;
     text-decoration: none;
     display: block;
     margin: 15px;
+}
+
+cite a,
+dd a {
+    color: var(--erik-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+dt {
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+dl {
+    margin-top: 50px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+dd {
+    margin-bottom: 30px;
+}
+
+blockquote {
+    padding: 10px;
+    max-width: 40%;
+    text-align: center;
+    background-color: color-mix(in srgb, var(--erik-pink) 85%, transparent);
+    border-radius: 15px;
+}
+
+cite a:visited,
+dd a:visited {
+    color: var(--erik-pink);
 }
 
 .nav-link {
@@ -90,7 +166,6 @@ header a {
 #contact-link {
     font-weight: 600;
     background-color: #242231;
-    margin-right: 200px;
     color: var(--erik-pink);
     max-height: 39px;
     padding: 15px;
@@ -103,7 +178,16 @@ header a {
 }
 
 #nav-bar {
-    max-width: 1000px;
+    max-width: 1400px;
+    height: 73px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    text-align: center;
+    text-wrap: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bio-intro {
@@ -121,4 +205,79 @@ header a {
     border-radius: 100%;
     width: 187px;
     height: 187px;
+}
+
+
+@media screen and (max-width: 576px) {
+    main, #bio-intro {
+        max-width: 450px;
+    }
+
+    p, header a {
+        font-size: .8rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    nav p {
+        font-size: 20px;
+        font-weight: 600;
+        grid-column: 1 / 2;
+    }
+
+    #nav-bar {
+        max-width: 425px;
+        display: grid;
+        grid-template-columns: 75px 1fr 75px;
+        grid-template-rows: 73px;
+        gap: 5px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #contact-link {
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+        grid-column: 3 / 4;
+    }
+
+    #nav-bar ul {
+        place-self: center;
+        grid-column: 2 / 3;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5px;
+        font-size: 12px;
+        text-wrap: none;
+    }
+
+    .nav-link {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    #bio-intro {
+        align-items: center;
+    }
+
+    #bio-intro img {
+        height: 130px;
+        width: 130px;
+        margin-left: 20px;
+    }
 }
