@@ -208,7 +208,7 @@ dd a:visited {
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 640px) {
     main, #bio-intro {
         max-width: 450px;
     }
