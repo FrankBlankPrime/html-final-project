@@ -12,8 +12,10 @@
 
 <body>
     <header>
-        <a href="#main">Skip to main content</a>
-        <a href=index.html>Frank's Final HTML Project</a>
+        <div class="skip">
+            <a href="#main">Skip to main content</a>
+            <a href=index.html>Frank's Final HTML Project</a>
+        </div>
     </header>
 
     <nav>
@@ -257,19 +259,30 @@
             <div class="infotable">
                 <!-- <img> To Be Added -->
                 <dl>
-                    <dt>Born:</dt>
-                    <dd><time datetime="1995-07-17">July 17, 1995 in Norton, VA</time></dd>
-                    <dt>Education:</dt>
-                    <dd>Bachelor's Degree from Virginia Tech</dd>
-                    <dt>Field of Study</dt>
-                    <dd>Psychology</dd>
-                    <dt>Languages</dt>
-                    <dd>English</dd>
-                    <dt>Interests</dt>
-                    <dd>Music</dd>
-                    <dd>Blacksmithing</dd>
-                    <dd>Table Top Games</dd>
-                    <dd>Streaming</dd>
+                    <div class="cell">
+                        <dt>Born:</dt>
+                        <dd><!--<time datetime="1995-07-17">July 17, 1995 in Norton, VA</time>-->July 17, 1995 in
+                            Norton, VA</dd>
+                    </div>
+                    <div class="cell">
+                        <dt>Education:</dt>
+                        <dd>Bachelor's Degree from Virginia Tech</dd>
+                    </div>
+                    <div class="cell">
+                        <dt>Field of Study</dt>
+                        <dd>Psychology</dd>
+                    </div>
+                    <div class="cell">
+                        <dt>Languages</dt>
+                        <dd>English</dd>
+                    </div>
+                    <div class="cell">
+                        <dt>Interests</dt>
+                        <dd>Music</dd>
+                        <dd>Blacksmithing</dd>
+                        <dd>Table Top Games</dd>
+                        <dd>Streaming</dd>
+                    </div>
                 </dl>
             </div>
         </section>

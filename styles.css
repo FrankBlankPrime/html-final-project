@@ -31,7 +31,8 @@ p {
 h1 {
     font-weight: 600;
     font-size: 42px;
-    color: var(--erik-blue)
+    color: var(--erik-blue);
+    margin-top: 5px;
 }
 
 h2 {
@@ -207,9 +208,45 @@ dd a:visited {
     height: 187px;
 }
 
+.cell {
+    display: flex;
+    border: 1px solid white;
+    align-items: center;
+    max-width: 550px;
+    justify-content: left;
+}
+
+.infotable dl dt,
+.infotable dl dd {
+    margin: unset;
+    padding: 10px;
+}
+
+.infotable dl dt {
+    border-right: 1px solid white;
+    width: 100px;
+}
+
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
 
 @media screen and (max-width: 576px) {
-    main, #bio-intro {
+
+    main,
+    #bio-intro {
         max-width: 450px;
     }
 
@@ -218,7 +255,8 @@ dd a:visited {
         margin-right: 5vw;
     }
 
-    p, header a {
+    p,
+    header a {
         font-size: .8rem;
     }
 
@@ -239,19 +277,15 @@ dd a:visited {
     }
 
     nav p {
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 600;
         grid-column: 1 / 2;
     }
 
     #nav-bar {
         max-width: 425px;
-        display: grid;
-        grid-template-columns: 75px 1fr 75px;
-        grid-template-rows: 73px;
-        gap: 5px;
-        text-align: center;
-        align-items: center;
+        display: flex;
+        justify-content: space-between;
     }
 
     #contact-link {
@@ -262,9 +296,9 @@ dd a:visited {
     }
 
     #nav-bar ul {
+        display: none;
         place-self: center;
         grid-column: 2 / 3;
-        display: flex;
         flex-flow: row wrap;
         gap: 5px;
         font-size: 12px;
@@ -277,6 +311,8 @@ dd a:visited {
     }
 
     #bio-intro {
+        margin-bottom: 50px;
+        margin-top: 125px;
         align-items: center;
     }
 
@@ -284,5 +320,25 @@ dd a:visited {
         height: 130px;
         width: 130px;
         margin-left: 20px;
+    }
+
+    .cell {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .infotable dl dt,
+    .infotable dl dd {
+        margin: unset;
+        padding: 10px;
+    }
+
+    .infotable dl dt {
+        border-right: 1px solid white;
+        width: 50px;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
